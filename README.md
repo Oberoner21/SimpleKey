@@ -1,5 +1,6 @@
 # SimpleKey
 Simple key is a basic library to debounce a key and handle short and long pushes. It can be used for all microcontrollers that use the Arduino framework. (Arduino, ESP2866, ESP32...)
+The SimpleKey class was adapted and modificatet using the template of the library SimpleRotary from [mprogram](https://github.com/mprograms/SimpleRotary).
 
 -----
 ## Arduino code
