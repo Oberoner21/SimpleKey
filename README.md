@@ -17,3 +17,11 @@ SimpleKey key = SimpleKey(KEY_PIN, 50, LOW);
 ```
 ### Getting Key Push
 To tell whether or not the button has been pressed simply call push();.
+```
+void loop()
+{
+    if(key.push() == 1)
+    {
+        Serial.print("Key pressed: "); Serial.println(key.getKeyPin());
+    }
+}
