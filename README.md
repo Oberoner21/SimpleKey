@@ -25,3 +25,24 @@ void loop()
         Serial.print("Key pressed: "); Serial.println(key.getKeyPin());
     }
 }
+```
+### Getting Key Long Push
+In most cases you will detect a short push and a long push in the same function. To do this, call getPushType(longPressTime). The parameter longPressTime defines the time period
+after which pressing the button is considered a long push. If the button is released earlier, a short press is returned. Unlike the push() function, however, it is the time at which the button is released.
+```
+unsigned int longPressTime = 500;  // in mS
+
+void loop()
+{
+    switch(key.getPushType(longPressTime)
+    {
+        case 1:
+            Serial.print("Key short pressed: "); Serial.println(key.getKeyPin());
+            break;
+        case 2:
+            Serial.print("Key long pressed: "); Serial.println(key.getKeyPin());
+            break;
+    }
+}
+```
+
